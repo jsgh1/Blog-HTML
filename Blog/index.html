@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Educativo: Etiquetas HTML por Categorías</title>
+  <meta name="description" content="Blog educativo con etiquetas HTML organizadas por categorías, ejemplos y buenas prácticas." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="border-bottom bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg container py-3">
+      <a class="navbar-brand fw-bold" href="#inicio">HTML por Categorías</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#estructurales">Estructurales</a></li>
+          <li class="nav-item"><a class="nav-link" href="#texto">Texto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#listas">Listas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formularios">Formularios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tablas">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio" class="container my-4">
+    <section class="hero p-4 p-md-5 rounded-4 bg-light border">
+      <h1 class="display-6 fw-bold mb-2">Blog Educativo: Etiquetas HTML</h1>
+      <p class="mb-0 text-secondary">
+        Etiquetas organizadas por categorías: estructurales, texto, listas, formularios, tablas y multimedia.
+        Cada entrada incluye definición, sintaxis, ejemplo funcional, demostración visual y buenas prácticas.
+      </p>
+    </section>
+
+    <div class="row g-4 mt-1">
+      <aside class="col-12 col-lg-4">
+        <div class="p-4 rounded-4 border bg-white">
+          <h2 class="h5 fw-bold">Checklist rápido</h2>
+          <ul class="text-secondary mb-0">
+            <li>Navegación entre categorías</li>
+            <li>Estructura semántica: header/nav/main/section/article/aside/footer</li>
+            <li>Mínimo 20 etiquetas explicadas</li>
+            <li>Formulario funcional</li>
+            <li>CSS básico</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-4 border bg-white mt-4">
+          <h2 class="h5 fw-bold">Cómo usar esto</h2>
+          <ol class="text-secondary mb-0">
+            <li>Crea la estructura de carpetas.</li>
+            <li>Pega este HTML en <code>index.html</code>.</li>
+            <li>Pega CSS/JS abajo.</li>
+            <li>Haz <code>git init</code>, commit y sube a GitHub público.</li>
+          </ol>
+        </div>
+      </aside>
+
+      <section class="col-12 col-lg-8">
+
+        <section id="estructurales" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">1) Estructurales (Semánticas)</h2>
+          <p class="text-secondary mb-4">
+            Organizan la página y mejoran accesibilidad/SEO.
+          </p>
+
+          <div class="accordion" id="accEstructura">
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#e1">
+                  &lt;header&gt;
+                </button>
+              </h3>
+              <div id="e1" class="accordion-collapse collapse show" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Encabezado de una página o sección.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;header&gt;...&lt;/header&gt;</code></p>
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <p class="mb-2 fw-semibold">Ejemplo (código):</p>
+                      <pre><code>&lt;header class="box"&gt;
+  &lt;h1&gt;Mi Blog&lt;/h1&gt;
+  &lt;p&gt;Aprende HTML&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <p class="mb-2 fw-semibold">Demostración visual:</p>
+                      <div class="demo box">
+                        <h4 class="h5 mb-1">Mi Blog</h4>
+                        <p class="mb-0">Aprende HTML</p>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="mt-3 mb-0">
+                    <li><strong>Uso adecuado:</strong> pon logo, título, navegación o info del encabezado.</li>
+                    <li><strong>Buenas prácticas:</strong> evita usarlo solo “por estilo”; úsalo con sentido semántico.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e2">
+                  &lt;nav&gt;
+                </button>
+              </h3>
+              <div id="e2" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Contenedor de enlaces de navegación.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;nav&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/nav&gt;</code></p>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <pre><code>&lt;nav class="box"&gt;
+  &lt;a href="#texto"&gt;Texto&lt;/a&gt; |
+  &lt;a href="#listas"&gt;Listas&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="demo box">
+                        <a href="#texto">Texto</a> | <a href="#listas">Listas</a>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="mt-3 mb-0">
+                    <li><strong>Uso adecuado:</strong> menús principales o secundarios.</li>
+                    <li><strong>Buenas prácticas:</strong> no metas enlaces irrelevantes; usa listas si hay muchos links.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e3">
+                  &lt;main&gt;
+                </button>
+              </h3>
+              <div id="e3" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Contenido principal del documento (solo uno por página).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;main&gt;...&lt;/main&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> no lo repitas, evita colocarlo dentro de <code>&lt;header&gt;</code> o <code>&lt;footer&gt;</code>.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e4">
+                  &lt;section&gt;
+                </button>
+              </h3>
+              <div id="e4" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Agrupa contenido relacionado dentro de una página.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;section&gt;&lt;h2&gt;...&lt;/h2&gt;...&lt;/section&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> casi siempre incluye un título (<code>h2/h3</code>).</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e5">
+                  &lt;article&gt;
+                </button>
+              </h3>
+              <div id="e5" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Contenido independiente (post, noticia, entrada).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;article&gt;...&lt;/article&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> úsalo para “entradas” reutilizables/compartibles.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e6">
+                  &lt;aside&gt;
+                </button>
+              </h3>
+              <div id="e6" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Contenido complementario (sidebar, notas, enlaces relacionados).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;aside&gt;...&lt;/aside&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> no lo uses para el contenido principal.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e7">
+                  &lt;footer&gt;
+                </button>
+              </h3>
+              <div id="e7" class="accordion-collapse collapse" data-bs-parent="#accEstructura">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Pie de página o de sección (autor, copyright, enlaces legales).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;footer&gt;...&lt;/footer&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> puede existir en página y también dentro de <code>&lt;article&gt;</code>.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="texto" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">2) Texto y Contenido</h2>
+          <p class="text-secondary mb-4">Etiquetas para títulos, párrafos y énfasis.</p>
+
+          <div class="accordion" id="accTexto">
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t1">
+                  &lt;h1&gt; a &lt;h6&gt;
+                </button>
+              </h3>
+              <div id="t1" class="accordion-collapse collapse show" data-bs-parent="#accTexto">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Jerarquía de títulos (h1 el más importante).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;h2&gt;Subtítulo&lt;/h2&gt;</code></p>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <pre><code>&lt;h2&gt;Título de sección&lt;/h2&gt;
+&lt;h3&gt;Subtítulo&lt;/h3&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="demo box">
+                        <h4 class="h5 mb-1">Título de sección</h4>
+                        <h5 class="h6 mb-0 text-secondary">Subtítulo</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="mt-3 mb-0">
+                    <li><strong>Buenas prácticas:</strong> no saltes niveles sin razón (h2 → h4).</li>
+                    <li><strong>Uso adecuado:</strong> estructura el contenido como un esquema.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
+                  &lt;p&gt;
+                </button>
+              </h3>
+              <div id="t2" class="accordion-collapse collapse" data-bs-parent="#accTexto">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Párrafo.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;p&gt;Texto...&lt;/p&gt;</code></p>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> no uses <code>&lt;br&gt;</code> para “hacer párrafos”.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t3">
+                  &lt;span&gt;
+                </button>
+              </h3>
+              <div id="t3" class="accordion-collapse collapse" data-bs-parent="#accTexto">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Contenedor en línea para aplicar estilos o agrupar texto.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;span class="badge"&gt;Nuevo&lt;/span&gt;</code></p>
+                  <div class="demo box">Etiqueta <span class="pill">Nuevo</span></div>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> úsalo cuando NO exista una etiqueta semántica mejor.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t4">
+                  &lt;strong&gt; y &lt;em&gt;
+                </button>
+              </h3>
+              <div id="t4" class="accordion-collapse collapse" data-bs-parent="#accTexto">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Énfasis semántico (importancia y énfasis).</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;strong&gt;Importante&lt;/strong&gt; y &lt;em&gt;énfasis&lt;/em&gt;</code></p>
+                  <div class="demo box">Esto es <strong>importante</strong> y esto tiene <em>énfasis</em>.</div>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> no lo uses solo para “negrita/cursiva” sin sentido.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t5">
+                  &lt;br&gt; y &lt;hr&gt;
+                </button>
+              </h3>
+              <div id="t5" class="accordion-collapse collapse" data-bs-parent="#accTexto">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> <code>&lt;br&gt;</code> salto de línea; <code>&lt;hr&gt;</code> separación temática.</p>
+                  <div class="demo box">
+                    Línea 1<br>Línea 2
+                    <hr>
+                    <small class="text-secondary">Sección separada</small>
+                  </div>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> evita abusar de <code>&lt;br&gt;</code> para maquetar.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="listas" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">3) Listas</h2>
+          <p class="text-secondary mb-4">Para agrupar elementos relacionados.</p>
+
+          <div class="accordion" id="accListas">
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#l1">
+                  &lt;ul&gt;, &lt;ol&gt; y &lt;li&gt;
+                </button>
+              </h3>
+              <div id="l1" class="accordion-collapse collapse show" data-bs-parent="#accListas">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Lista desordenada, ordenada y elemento de lista.</p>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Planear&lt;/li&gt;
+  &lt;li&gt;Construir&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="demo box">
+                        <ul class="mb-2">
+                          <li>HTML</li><li>CSS</li>
+                        </ul>
+                        <ol class="mb-0">
+                          <li>Planear</li><li>Construir</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="mt-3 mb-0">
+                    <li><strong>Buenas prácticas:</strong> usa <code>&lt;li&gt;</code> siempre dentro de <code>ul/ol</code>.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#l2">
+                  &lt;dl&gt;, &lt;dt&gt; y &lt;dd&gt;
+                </button>
+              </h3>
+              <div id="l2" class="accordion-collapse collapse" data-bs-parent="#accListas">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Lista de definición: término (<code>dt</code>) y descripción (<code>dd</code>).</p>
+                  <div class="demo box">
+                    <dl class="mb-0">
+                      <dt>HTML</dt>
+                      <dd>Lenguaje de marcado para estructurar páginas web.</dd>
+                    </dl>
+                  </div>
+                  <p class="mb-0"><strong>Buenas prácticas:</strong> ideal para glosarios y pares término/definición.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="formularios" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">4) Formularios (Obligatorio)</h2>
+          <p class="text-secondary mb-4">
+            Incluye etiquetas: <code>form</code>, <code>label</code>, <code>input</code>, <code>textarea</code>,
+            <code>select</code>, <code>option</code>, <code>button</code>, <code>fieldset</code>, <code>legend</code>.
+          </p>
+
+          <div class="accordion" id="accForms">
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                  &lt;form&gt; + campos (demo funcional)
+                </button>
+              </h3>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#accForms">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Agrupa controles para enviar datos.</p>
+                  <p><strong>Buenas prácticas:</strong> usa <code>label</code> asociado con <code>for</code> y <code>id</code>; valida en cliente y servidor.</p>
+
+                  <div class="row g-3">
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-semibold mb-2">Ejemplo (código):</p>
+                      <pre><code>&lt;form id="contactForm"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contacto&lt;/legend&gt;
+
+    &lt;label for="name"&gt;Nombre&lt;/label&gt;
+    &lt;input id="name" name="name" type="text" required&gt;
+
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input id="email" name="email" type="email" required&gt;
+
+    &lt;label for="topic"&gt;Tema&lt;/label&gt;
+    &lt;select id="topic" name="topic"&gt;
+      &lt;option value="html"&gt;HTML&lt;/option&gt;
+      &lt;option value="css"&gt;CSS&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label for="msg"&gt;Mensaje&lt;/label&gt;
+    &lt;textarea id="msg" name="msg" rows="3" required&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <p class="fw-semibold mb-2">Demostración visual (pruébalo):</p>
+
+                      <form id="contactForm" class="demo box">
+                        <fieldset class="p-3 rounded-3 border">
+                          <legend class="float-none w-auto px-2">Contacto</legend>
+
+                          <div class="mb-2">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input id="name" name="name" type="text" class="form-control" required>
+                          </div>
+
+                          <div class="mb-2">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" name="email" type="email" class="form-control" required>
+                          </div>
+
+                          <div class="mb-2">
+                            <label for="topic" class="form-label">Tema</label>
+                            <select id="topic" name="topic" class="form-select">
+                              <option value="html">HTML</option>
+                              <option value="css">CSS</option>
+                            </select>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="msg" class="form-label">Mensaje</label>
+                            <textarea id="msg" name="msg" rows="3" class="form-control" required></textarea>
+                          </div>
+
+                          <button class="btn btn-primary" type="submit">Enviar</button>
+                          <p id="formStatus" class="mt-3 mb-0 small text-secondary"></p>
+                        </fieldset>
+                      </form>
+
+                      <p class="mt-2 mb-0 text-secondary small">
+                        Esto no “envía” a servidor: lo procesa con JS (ideal para demo). Para producción, se conecta a backend.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <p class="mb-1"><strong>Inputs recomendados (ejemplos rápidos):</strong></p>
+                    <div class="demo box">
+                      <input type="password" class="form-control mb-2" placeholder="password">
+                      <input type="date" class="form-control mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chk1">
+                        <label class="form-check-label" for="chk1">checkbox</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="r1" id="r1">
+                        <label class="form-check-label" for="r1">radio</label>
+                      </div>
+                    </div>
+                    <p class="mb-0"><strong>Buenas prácticas:</strong> usa <code>required</code>, <code>type=email</code>, y mensajes claros de error.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="tablas" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">5) Tablas</h2>
+          <p class="text-secondary mb-4">Para datos tabulares (no para maquetar).</p>
+
+          <div class="accordion" id="accTablas">
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tb1">
+                  &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;
+                </button>
+              </h3>
+              <div id="tb1" class="accordion-collapse collapse show" data-bs-parent="#accTablas">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Estructura datos en filas/columnas.</p>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Etiqueta&lt;/th&gt;&lt;th&gt;Uso&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;p&lt;/td&gt;&lt;td&gt;Párrafo&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="demo box">
+                        <table class="table table-sm mb-0">
+                          <thead>
+                            <tr><th>Etiqueta</th><th>Uso</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr><td>&lt;p&gt;</td><td>Párrafo</td></tr>
+                            <tr><td>&lt;img&gt;</td><td>Imagen</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="mt-3 mb-0">
+                    <li><strong>Buenas prácticas:</strong> usa <code>&lt;th&gt;</code> para encabezados; no uses tablas para layout.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="multimedia" class="p-4 rounded-4 border bg-white mb-4">
+          <h2 class="h4 fw-bold mb-1">6) Multimedia</h2>
+          <p class="text-secondary mb-4">Imágenes, audio, video e incrustaciones.</p>
+
+          <div class="accordion" id="accMedia">
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#m1">
+                  &lt;img&gt;
+                </button>
+              </h3>
+              <div id="m1" class="accordion-collapse collapse show" data-bs-parent="#accMedia">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Inserta una imagen.</p>
+                  <p><strong>Sintaxis:</strong> <code>&lt;img src="..." alt="Descripción"&gt;</code></p>
+                  <div class="demo box">
+                    <img class="img-fluid rounded-3 border" alt="Imagen de ejemplo" src="https://picsum.photos/800/300" />
+                    <p class="mt-2 mb-0 small text-secondary">
+                      Buenas prácticas: siempre usa <code>alt</code> (accesibilidad/SEO) y tamaños adecuados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m2">
+                  &lt;audio&gt; + &lt;source&gt;
+                </button>
+              </h3>
+              <div id="m2" class="accordion-collapse collapse" data-bs-parent="#accMedia">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Reproductor de audio con fuentes alternativas.</p>
+                  <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                  <p class="mb-0 text-secondary">
+                    Demo: usa un archivo real en tu repo (por ejemplo <code>assets/audio.mp3</code>).
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3">
+                  &lt;video&gt; + &lt;source&gt;
+                </button>
+              </h3>
+              <div id="m3" class="accordion-collapse collapse" data-bs-parent="#accMedia">
+                <div class="accordion-body">
+                  <pre><code>&lt;video controls width="480"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                  <p class="mb-0 text-secondary">Buen tip: incluye <code>controls</code> y compresión adecuada del video.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m4">
+                  &lt;iframe&gt; (incrustación)
+                </button>
+              </h3>
+              <div id="m4" class="accordion-collapse collapse" data-bs-parent="#accMedia">
+                <div class="accordion-body">
+                  <p><strong>Definición:</strong> Incrusta contenido externo (mapas, videos, etc.).</p>
+                  <div class="ratio ratio-16x9 demo box p-0">
+                    <iframe
+                      title="Video incrustado"
+                      src="https://www.youtube.com/embed/dD2EISBDjWM"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <p class="mt-2 mb-0"><strong>Buenas prácticas:</strong> revisa permisos (<code>allow</code>), rendimiento y seguridad.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-top">
+    <div class="container py-4 text-secondary small">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© <span id="year"></span> Blog Educativo HTML</span>
+        <span>Repositorio público: agrega tu enlace de GitHub aquí</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
