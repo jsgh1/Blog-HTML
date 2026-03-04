@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body data-theme="light">
   <header class="border-bottom bg-white sticky-top">
     <nav class="navbar navbar-expand-lg container py-3">
       <a class="navbar-brand fw-bold" href="#inicio">HTML por Categorías</a>
@@ -29,6 +29,16 @@
           <li class="nav-item"><a class="nav-link" href="#tablas">Tablas</a></li>
           <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
         </ul>
+
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+          <span class="small text-secondary">Tema</span>
+
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="themeToggle" aria-label="Cambiar tema">
+          </div>
+
+          <span id="themeLabel" class="small fw-semibold">Claro</span>
+        </div>
       </div>
     </nav>
   </header>
@@ -58,9 +68,9 @@
         <div class="p-4 rounded-4 border bg-white mt-4">
           <h2 class="h5 fw-bold">Cómo usar esto</h2>
           <ol class="text-secondary mb-0">
-            <li>Crea la estructura de carpetas.</li>
-            <li>Pega este HTML en <code>index.html</code>.</li>
-            <li>Pega CSS/JS abajo.</li>
+            <li>Ve al repositorio que esta en el footer.</li>
+            <li>Lo clonas<code>Clone</code>.</li>
+            <li>Revisa que todo este bien</li>
             <li>Haz <code>git init</code>, commit y sube a GitHub público.</li>
           </ol>
         </div>
@@ -616,7 +626,7 @@
                   <div class="ratio ratio-16x9 demo box p-0">
                     <iframe
                       title="Video incrustado"
-                      src="https://www.youtube.com/embed/dD2EISBDjWM"
+                      src="https://www.youtube.com/embed/MJkdaVFHrto?si=NKQa47r228mqMfGT"
                       allowfullscreen
                     ></iframe>
                   </div>
@@ -635,7 +645,7 @@
     <div class="container py-4 text-secondary small">
       <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
         <span>© <span id="year"></span> Blog Educativo HTML</span>
-        <span>Repositorio público: agrega tu enlace de GitHub aquí</span>
+        <span>https://github.com/jsgh1/Blog-HTML.git</span>
       </div>
     </div>
   </footer>
