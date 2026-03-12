@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.caja {
+  width: 320px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #aaa;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+#resultado {
+  margin-top: 15px;
+  font-weight: bold;
+}

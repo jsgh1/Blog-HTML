@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.caja {
+  width: 320px;
+  margin: 70px auto;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+#tiempo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+button {
+  margin: 4px;
+  padding: 8px 12px;
+  border: 1px solid #999;
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+

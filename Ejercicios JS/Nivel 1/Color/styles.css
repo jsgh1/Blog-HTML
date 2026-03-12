@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.caja {
+  width: 340px;
+  margin: 60px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #999;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}

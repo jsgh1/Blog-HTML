@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.caja {
+  width: 300px;
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #999;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 18px;
+}
