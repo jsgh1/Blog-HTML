@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario de una tienda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Inventario.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../Problema 1/Banco.html">P1 Banco</a>
+      <a href="../Problema 2/Inventario.html">P2 Inventario</a>
+      <a href="../Problema 3/Registro.html">P3 Estudiantes</a>
+      <a href="../Problema 4/Carrito.html">P4 Carrito</a>
+      <a href="../Problema 5/Control.html">P5 Vehículos</a>
+      <a href="../Problema 6/Biblioteca.html">P6 Biblioteca</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="badge">🛒 Problema 2 · Inventario</div>
+        <h1>Inventario de una tienda</h1>
+        <p>Registra productos, consulta su información y calcula automáticamente el valor total del inventario.</p>
+      </div>
+      <aside class="hero-side">
+        <h3>Incluye</h3>
+        <ul>
+          <li>Agregar productos con nombre, precio y stock</li><li>Ver listado completo del inventario</li><li>Calcular unidades y valor total</li><li>Consultar producto individual</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>Registrar producto</h2>
+        <div class="form-grid">
+          <div class="full">
+            <label for="nombreProducto">Nombre del producto</label>
+            <input class="field" id="nombreProducto" placeholder="Ej. Mouse inalámbrico" />
+          </div>
+          <div>
+            <label for="precioProducto">Precio</label>
+            <input class="field" id="precioProducto" type="number" min="0" step="0.01" placeholder="0.00" />
+          </div>
+          <div>
+            <label for="cantidadProducto">Cantidad</label>
+            <input class="field" id="cantidadProducto" type="number" min="0" step="1" placeholder="0" />
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary" id="btnAgregarProducto">Agregar producto</button>
+          <button class="secondary" id="btnDemoInventario">Cargar ejemplo</button>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>Consultar producto</h2>
+        <label for="buscarProducto">Selecciona un producto</label>
+        <select id="buscarProducto"></select>
+        <div class="actions">
+          <button class="secondary" id="btnConsultarProducto">Ver información</button>
+        </div>
+        <div class="output" id="detalleProducto">Selecciona un producto para consultar su información.</div>
+      </article>
+      <article class="panel full">
+        <div class="stats">
+          <div class="stat"><span>Productos registrados</span><strong id="totalProductos">0</strong></div>
+          <div class="stat"><span>Unidades en stock</span><strong id="totalUnidades">0</strong></div>
+          <div class="stat"><span>Valor total del inventario</span><strong id="valorInventario">$0.00</strong></div>
+        </div>
+      </article>
+      <article class="panel full">
+        <h2>Listado de inventario</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th></tr></thead>
+            <tbody id="tablaInventario"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="Inventario.js"></script>
+</body>
+</html>

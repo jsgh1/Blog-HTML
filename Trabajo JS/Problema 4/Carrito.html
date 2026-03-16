@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de compras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Carrito.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../Problema 1/Banco.html">P1 Banco</a>
+      <a href="../Problema 2/Inventario.html">P2 Inventario</a>
+      <a href="../Problema 3/Registro.html">P3 Estudiantes</a>
+      <a href="../Problema 4/Carrito.html">P4 Carrito</a>
+      <a href="../Problema 5/Control.html">P5 Vehículos</a>
+      <a href="../Problema 6/Biblioteca.html">P6 Biblioteca</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="badge">🧺 Problema 4 · Tienda en línea</div>
+        <h1>Carrito de compras</h1>
+        <p>Agrega productos al carrito, elimina artículos y visualiza el total actualizado antes del pago.</p>
+      </div>
+      <aside class="hero-side">
+        <h3>Incluye</h3>
+        <ul>
+          <li>Catálogo con productos base</li><li>Agregar y eliminar artículos</li><li>Calcular total de la compra</li><li>Resumen visual del carrito</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid">
+      <article class="panel full">
+        <h2>Catálogo</h2>
+        <div class="product-list" id="catalogo"></div>
+      </article>
+      <article class="panel">
+        <h2>Agregar producto manualmente</h2>
+        <div class="form-grid">
+          <div class="full"><label for="nombreManual">Nombre</label><input class="field" id="nombreManual" placeholder="Ej. Audífonos gamer" /></div>
+          <div><label for="precioManual">Precio</label><input class="field" id="precioManual" type="number" min="0" step="0.01" /></div>
+        </div>
+        <div class="actions"><button class="primary" id="btnAgregarManual">Agregar al carrito</button></div>
+      </article>
+      <article class="panel">
+        <h2>Resumen</h2>
+        <div class="stats">
+          <div class="stat"><span>Ítems en carrito</span><strong id="cantidadCarrito">0</strong></div>
+          <div class="stat"><span>Total a pagar</span><strong id="totalCarrito">$0.00</strong></div>
+          <div class="stat"><span>Productos distintos</span><strong id="distintosCarrito">0</strong></div>
+        </div>
+      </article>
+      <article class="panel full">
+        <h2>Carrito actual</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th><th>Acción</th></tr></thead>
+            <tbody id="tablaCarrito"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="Carrito.js"></script>
+</body>
+</html>

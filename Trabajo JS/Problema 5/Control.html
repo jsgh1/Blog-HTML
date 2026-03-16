@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de vehículos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Control.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../Problema 1/Banco.html">P1 Banco</a>
+      <a href="../Problema 2/Inventario.html">P2 Inventario</a>
+      <a href="../Problema 3/Registro.html">P3 Estudiantes</a>
+      <a href="../Problema 4/Carrito.html">P4 Carrito</a>
+      <a href="../Problema 5/Control.html">P5 Vehículos</a>
+      <a href="../Problema 6/Biblioteca.html">P6 Biblioteca</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="badge">🚗 Problema 5 · Transporte</div>
+        <h1>Control de vehículos</h1>
+        <p>Monitorea varios vehículos, aumenta o disminuye su velocidad y visualiza su estado actual en tiempo real.</p>
+      </div>
+      <aside class="hero-side">
+        <h3>Incluye</h3>
+        <ul>
+          <li>Registrar múltiples vehículos</li><li>Acelerar y frenar por separado</li><li>Evitar velocidades negativas</li><li>Ver tablero de estado</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>Registrar vehículo</h2>
+        <div class="form-grid">
+          <div><label for="placaVehiculo">Placa</label><input class="field" id="placaVehiculo" placeholder="ABC123" /></div>
+          <div><label for="tipoVehiculo">Tipo</label><input class="field" id="tipoVehiculo" placeholder="Camión" /></div>
+        </div>
+        <div class="actions"><button class="primary" id="btnAgregarVehiculo">Agregar vehículo</button><button class="secondary" id="btnDemoVehiculos">Cargar ejemplo</button></div>
+      </article>
+      <article class="panel">
+        <h2>Resumen de flota</h2>
+        <div class="stats">
+          <div class="stat"><span>Vehículos activos</span><strong id="totalVehiculos">0</strong></div>
+          <div class="stat"><span>Velocidad promedio</span><strong id="promedioVelocidad">0 km/h</strong></div>
+          <div class="stat"><span>Mayor velocidad</span><strong id="maxVelocidad">0 km/h</strong></div>
+        </div>
+      </article>
+      <article class="panel full">
+        <h2>Panel de control</h2>
+        <div class="vehicle-grid" id="panelVehiculos"></div>
+      </article>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="Control.js"></script>
+</body>
+</html>

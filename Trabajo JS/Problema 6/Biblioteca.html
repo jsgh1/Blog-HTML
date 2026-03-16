@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de biblioteca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Biblioteca.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../Problema 1/Banco.html">P1 Banco</a>
+      <a href="../Problema 2/Inventario.html">P2 Inventario</a>
+      <a href="../Problema 3/Registro.html">P3 Estudiantes</a>
+      <a href="../Problema 4/Carrito.html">P4 Carrito</a>
+      <a href="../Problema 5/Control.html">P5 Vehículos</a>
+      <a href="../Problema 6/Biblioteca.html">P6 Biblioteca</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="badge">📚 Problema 6 · Biblioteca</div>
+        <h1>Sistema de biblioteca</h1>
+        <p>Controla el préstamo y la devolución de libros, consultando su estado y disponibilidad en cualquier momento.</p>
+      </div>
+      <aside class="hero-side">
+        <h3>Incluye</h3>
+        <ul>
+          <li>Registrar libros con título y autor</li><li>Prestar libros a usuarios</li><li>Marcar devoluciones</li><li>Consultar disponibilidad</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>Registrar libro</h2>
+        <div class="form-grid">
+          <div class="full"><label for="tituloLibro">Título</label><input class="field" id="tituloLibro" placeholder="Ej. Cien años de soledad" /></div>
+          <div class="full"><label for="autorLibro">Autor</label><input class="field" id="autorLibro" placeholder="Ej. Gabriel García Márquez" /></div>
+        </div>
+        <div class="actions"><button class="primary" id="btnAgregarLibro">Agregar libro</button><button class="secondary" id="btnDemoBiblioteca">Cargar ejemplo</button></div>
+      </article>
+      <article class="panel">
+        <h2>Gestión de préstamo</h2>
+        <label for="selectLibro">Selecciona un libro</label>
+        <select id="selectLibro"></select>
+        <label for="usuarioPrestamo" style="margin-top:12px;">Usuario</label>
+        <input class="field" id="usuarioPrestamo" placeholder="Nombre del usuario" />
+        <div class="actions">
+          <button class="warning" id="btnPrestarLibro">Prestar</button>
+          <button class="success" id="btnDevolverLibro">Devolver</button>
+          <button class="secondary" id="btnConsultarLibro">Consultar</button>
+        </div>
+      </article>
+      <article class="panel full">
+        <div class="stats">
+          <div class="stat"><span>Total de libros</span><strong id="totalLibros">0</strong></div>
+          <div class="stat"><span>Disponibles</span><strong id="librosDisponibles">0</strong></div>
+          <div class="stat"><span>Prestados</span><strong id="librosPrestados">0</strong></div>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>Detalle del libro</h2>
+        <div class="output" id="detalleLibro">Selecciona un libro para ver su información.</div>
+      </article>
+      <article class="panel">
+        <h2>Catálogo</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Título</th><th>Autor</th><th>Estado</th><th>Usuario</th></tr></thead>
+            <tbody id="tablaLibros"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="Biblioteca.js"></script>
+</body>
+</html>

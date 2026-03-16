@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de estudiantes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Registro.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../Problema 1/Banco.html">P1 Banco</a>
+      <a href="../Problema 2/Inventario.html">P2 Inventario</a>
+      <a href="../Problema 3/Registro.html">P3 Estudiantes</a>
+      <a href="../Problema 4/Carrito.html">P4 Carrito</a>
+      <a href="../Problema 5/Control.html">P5 Vehículos</a>
+      <a href="../Problema 6/Biblioteca.html">P6 Biblioteca</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="badge">🎓 Problema 3 · Estudiantes</div>
+        <h1>Registro de estudiantes</h1>
+        <p>Gestiona varios estudiantes, almacena su información básica y determina si aprueban o no según la nota final.</p>
+      </div>
+      <aside class="hero-side">
+        <h3>Incluye</h3>
+        <ul>
+          <li>Registrar varios estudiantes</li><li>Calcular estado académico automáticamente</li><li>Mostrar información individual</li><li>Visualizar resumen general</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>Registrar estudiante</h2>
+        <div class="form-grid">
+          <div>
+            <label for="nombreEstudiante">Nombre</label>
+            <input class="field" id="nombreEstudiante" placeholder="Ej. Laura Gómez" />
+          </div>
+          <div>
+            <label for="programaEstudiante">Programa</label>
+            <input class="field" id="programaEstudiante" placeholder="Ej. Análisis y Desarrollo" />
+          </div>
+          <div>
+            <label for="edadEstudiante">Edad</label>
+            <input class="field" id="edadEstudiante" type="number" min="1" step="1" placeholder="18" />
+          </div>
+          <div>
+            <label for="notaEstudiante">Nota final</label>
+            <input class="field" id="notaEstudiante" type="number" min="0" max="5" step="0.1" placeholder="0.0 - 5.0" />
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary" id="btnRegistrarEstudiante">Registrar</button>
+          <button class="secondary" id="btnDemoRegistro">Cargar ejemplo</button>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>Consultar estudiante</h2>
+        <label for="selectEstudiante">Selecciona un estudiante</label>
+        <select id="selectEstudiante"></select>
+        <div class="actions"><button class="secondary" id="btnVerEstudiante">Ver detalle</button></div>
+        <div class="output" id="detalleEstudiante">Aquí verás la información del estudiante seleccionado.</div>
+      </article>
+      <article class="panel full">
+        <div class="stats">
+          <div class="stat"><span>Total estudiantes</span><strong id="totalEstudiantes">0</strong></div>
+          <div class="stat"><span>Aprobaron</span><strong id="totalAprobados">0</strong></div>
+          <div class="stat"><span>Promedio del grupo</span><strong id="promedioGrupo">0.0</strong></div>
+        </div>
+      </article>
+      <article class="panel full">
+        <h2>Listado académico</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Programa</th><th>Edad</th><th>Nota</th><th>Estado</th></tr></thead>
+            <tbody id="tablaEstudiantes"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="Registro.js"></script>
+</body>
+</html>
