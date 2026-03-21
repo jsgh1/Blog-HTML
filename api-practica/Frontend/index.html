@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel CRUD</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="menu" id="resourceMenu"></nav>
+    </aside>
+
+    <main class="content">
+      <section class="panel topbar">
+        <div>
+          <p class="eyebrow">Vista actual</p>
+          <h2 id="sectionTitle">Productos</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-btn" id="refreshBtn">Recargar</button>
+          <button class="primary-btn" id="newBtn">+ Nuevo registro</button>
+        </div>
+      </section>
+
+      <section class="panel filters">
+        <div class="field grow">
+          <label for="searchInput">Buscar</label>
+          <input id="searchInput" type="text" placeholder="Escribe para buscar..." />
+        </div>
+        <div class="field">
+          <label for="filterSelect">Filtrar por</label>
+          <select id="filterSelect"></select>
+        </div>
+        <div class="field">
+          <label for="filterValue">Valor</label>
+          <select id="filterValue"></select>
+        </div>
+      </section>
+
+      <section class="stats-grid" id="statsGrid"></section>
+
+      <section class="panel table-card">
+        <div class="table-head">
+          <h3>Listado</h3>
+          <span class="badge" id="resultsCount">0 registros</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="formModal">
+    <div class="modal-box panel">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">Formulario</p>
+          <h3 id="modalTitle">Nuevo registro</h3>
+        </div>
+        <button class="icon-btn" id="closeFormModal">✕</button>
+      </div>
+      <form id="entityForm" class="form-grid"></form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="detailModal">
+    <div class="modal-box panel detail-box">
+      <div class="modal-head">
+        <div>
+          <p class="eyebrow">Detalle</p>
+          <h3 id="detailTitle">Registro</h3>
+        </div>
+        <button class="icon-btn" id="closeDetailModal">✕</button>
+      </div>
+      <div id="detailContent" class="detail-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
